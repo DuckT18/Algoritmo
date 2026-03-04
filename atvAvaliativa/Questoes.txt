@@ -1,0 +1,43 @@
+## Questão 1
+
+A explicação dessa diferença é a estrutura que cada algoritmo utiliza para organizar os dados.
+Enquanto o HeapSort é baseado em uma estrutura matemática rígida, transformando uma lista em
+uma árvore binária completa sendo que a altura da árvore binária sempre será a mesma, log de n,
+o ShellSort é um algoritmo que depende totalmente de uma escolha externa: a sequência 
+de intervalos. Além disso, o HeapSort faz o mesmo trabalho repetitivo várias vezes, remove o
+maior elemento e reorganiza a árvore e o custo total é sempre n x log n
+
+## Questão 2
+
+a) Max-Heap: [45, 18, 30, 6, 12, 3]
+
+b) Primeira extração: [30, 18, 3, 6, 12, 45]
+
+## Questão 3
+
+Resposta: A) Apenas II e IV
+I - Falsa, O ShellSort realiza trocas entre elementos que estão distantes uns dos outros, 
+o que pode fazer com que um elemento passe à frente de outro, perdendo a estabilidade.
+II - Correta, Sim o HeapSort utiliza a estrutura baseada em árvores binárias
+III - Falsa, Isso é o trabalho do ShellSort que é baseado em gaps
+IV - Correta, O motivo da criação do ShellSort é justamente esse, o insertionsort tinha que
+realizar muitos passos por mover apenas elementos adjacentes, o ShellSort veio para reduzir a
+quantidade de passos necessários, podendo realizar trocas de elementos distantes uns dos outros
+
+## Questão 4
+
+A escolha seria provavelmente o HeapSort por fornecer previsibilidade, algo indispensável para
+análise de milhões de dados, independente de como os dados estiverem a complexidade será sempre
+a mesma, podendo garantir uma previsibilidade no tempo de processamento e resposta. Além disso,
+o HeapSort é um algoritmo que não exige muita memória, o que o torna uma boa escolha.
+
+## Questão 5
+
+A estrutura Heap é fundamental em algoritmos de grafos porque ela é a implementação mais 
+eficiente para uma Fila de Prioridade. Em muitos algoritmos de grafos, precisamos selecionar 
+repetidamente o próximo melhor nó (o mais próximo, o de menor custo ou o de maior peso)
+entre vários candidatos. Fazer essa busca em uma lista comum levaria tempo, mas com um Heap,
+essa operação é drasticamente otimizada. Um exemplo é o algoritmo Dijkstra que é utilizado
+para encontrar o caminho mais curto entre um nó de origem e todos os outros nós que sem heap
+teria que percorrer todos os nós adjacentes e buscar manualmente qual deles tem a menor distância.
+Já com heap o algoritmo mantém uma fila de prioridade com os vértices e distâncias atuais

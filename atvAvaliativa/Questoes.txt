@@ -1,5 +1,7 @@
 ## Questão 1
 
+Explique por que o HeapSort possui complexidade O(n log n) garantida em todos os casos, enquanto o ShellSort não possui complexidade previsível.
+
 A explicação dessa diferença é a estrutura que cada algoritmo utiliza para organizar os dados.
 Enquanto o HeapSort é baseado em uma estrutura matemática rígida, transformando uma lista em
 uma árvore binária completa sendo que a altura da árvore binária sempre será a mesma, log de n,
@@ -9,11 +11,32 @@ maior elemento e reorganiza a árvore e o custo total é sempre n x log n
 
 ## Questão 2
 
+Dado o vetor:
+[30, 12, 45, 6, 18, 3]
+ 
+a) Construa o Max-Heap correspondente.
+b) Indique o vetor após a primeira extração da raiz.
+
 a) Max-Heap: [45, 18, 30, 6, 12, 3]
 
 b) Primeira extração: [30, 18, 3, 6, 12, 45]
 
 ## Questão 3
+
+Analise as afirmativas:
+
+I – ShellSort é estável.
+II – HeapSort utiliza estrutura baseada em árvore binária completa.
+III – HeapSort depende da sequência de gaps.
+IV – ShellSort é uma melhoria do Insertion Sort.
+
+Assinale a alternativa correta:
+
+A) Apenas II e IV
+B) Apenas I e III
+C) Apenas II, III e IV
+D) Apenas II e III
+E) Todas estão corretas
 
 Resposta: A) Apenas II e IV
 I - Falsa, O ShellSort realiza trocas entre elementos que estão distantes uns dos outros, 
@@ -26,12 +49,18 @@ quantidade de passos necessários, podendo realizar trocas de elementos distante
 
 ## Questão 4
 
+Em um sistema que processa milhões de registros diariamente, qual algoritmo seria mais indicado? Justifique considerando complexidade e previsibilidade.
+
 A escolha seria provavelmente o HeapSort por fornecer previsibilidade, algo indispensável para
 análise de milhões de dados, independente de como os dados estiverem a complexidade será sempre
 a mesma, podendo garantir uma previsibilidade no tempo de processamento e resposta. Além disso,
 o HeapSort é um algoritmo que não exige muita memória, o que o torna uma boa escolha.
 
 ## Questão 5
+
+Explique como a estrutura Heap pode ser utilizada em algoritmos de grafos e cite um exemplo.
+
+(Espera-se menção ao uso em fila de prioridade, como no algoritmo de Dijkstra.)
 
 A estrutura Heap é fundamental em algoritmos de grafos porque ela é a implementação mais 
 eficiente para uma Fila de Prioridade. Em muitos algoritmos de grafos, precisamos selecionar 
